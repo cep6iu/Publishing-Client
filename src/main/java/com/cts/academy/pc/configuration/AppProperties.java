@@ -5,19 +5,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- *
  * Class with properties of application
  *
  * @author valeriu.vicol
- *
- *  //command to set the source
- *  java -classpath <path to .properties>  com.cts.academy.pc.configuration.AppProperties
- *
- *
- *
+ * <p>
+ * //command to set the source
+ * java -jar -D<key>="<value>"<name>.jar
+ * <p>
+ * java -jar -Dapp.home="/home/mkyon/test" example.jar
  */
 
-@PropertySource(value = {"file:${config.location}"},ignoreResourceNotFound = true)
+@PropertySource(value = {"file:${path}"})
 @Configuration
 public class AppProperties {
 
@@ -53,6 +51,7 @@ public class AppProperties {
 
     @Value("${log.severity}")
     private String logSeverity;
+
 
     public String getLdapPassword() {
         return ldapPassword;
