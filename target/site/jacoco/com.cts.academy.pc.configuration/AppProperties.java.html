@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AppProperties.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pc</a> &gt; <a href="index.source.html" class="el_package">com.cts.academy.pc.configuration</a> &gt; <span class="el_source">AppProperties.java</span></div><h1>AppProperties.java</h1><pre class="source lang-java linenums">package com.cts.academy.pc.configuration;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+/**
+ *
+ * Class with properties of application
+ *
+ * @author valeriu.vicol
+ *
+ *  //command to set the source
+ *  java -classpath &lt;path to .properties&gt;  com.cts.academy.pc.configuration.AppProperties
+ *
+ *
+ *
+ */
+
+@PropertySource(value = {&quot;file:${config.location}&quot;},ignoreResourceNotFound = true)
+@Configuration
+<span class="fc" id="L22">public class AppProperties {</span>
+
+    @Value(&quot;${ldap.password}&quot;)
+    private String ldapPassword;
+
+    @Value(&quot;${ldap.dn}&quot;)
+    private String ldapDn;
+
+    @Value(&quot;${ldap.url}&quot;)
+    private String ldapUrl;
+
+    @Value(&quot;${ldap.connection.timeout}&quot;)
+    private String ldapConnectionTimeout;
+
+    @Value(&quot;${ldap.read.timeout}&quot;)
+    private String ldapReadTimeout;
+
+    @Value(&quot;${connection.pool.timeout}&quot;)
+    private String connectionPoolTimeout;
+
+    @Value(&quot;${connection.pool.max.size}&quot;)
+    private String connectionPoolMaxSize;
+
+    @Value(&quot;${connection.pool.initial.size}&quot;)
+    private String connectionPoolInitialSize;
+
+    @Value(&quot;${connection.pool.preferred.size}&quot;)
+    private String connectionPoolPreferredSize;
+
+    @Value(&quot;${connection.pool.idle.timeout}&quot;)
+    private String connectionPoolIdleTimeout;
+
+    @Value(&quot;${log.severity}&quot;)
+    private String logSeverity;
+
+    public String getLdapPassword() {
+<span class="fc" id="L58">        return ldapPassword;</span>
+    }
+
+    public String getLdapDn() {
+<span class="fc" id="L62">        return ldapDn;</span>
+
+    }
+
+    public String getLdapUrl() {
+<span class="fc" id="L67">        return ldapUrl;</span>
+    }
+
+    public String getLdapConnectionTimeout() {
+<span class="fc" id="L71">        return ldapConnectionTimeout;</span>
+    }
+
+    public String getLdapReadTimeout() {
+<span class="fc" id="L75">        return ldapReadTimeout;</span>
+    }
+
+    public String getConnectionPoolTimeout() {
+<span class="fc" id="L79">        return connectionPoolTimeout;</span>
+    }
+
+    public String getConnectionPoolMaxSize() {
+<span class="fc" id="L83">        return connectionPoolMaxSize;</span>
+    }
+
+    public String getConnectionPoolPreferredSize() {
+<span class="fc" id="L87">        return connectionPoolPreferredSize;</span>
+    }
+
+    public String getConnectionPoolIdleTimeout() {
+<span class="fc" id="L91">        return connectionPoolIdleTimeout;</span>
+    }
+
+    public String getLogSeverity() {
+<span class="fc" id="L95">        return logSeverity;</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
