@@ -10,12 +10,10 @@ import org.springframework.context.annotation.PropertySource;
  * @author valeriu.vicol
  * <p>
  * //command to set the source
- * java -jar -D<key>="<value>"<name>.jar
- * <p>
- * java -jar -Dapp.home="/home/mkyon/test" example.jar
+ *  java -jar -Dapp.home="/home/mkyon/test" example.jar
  */
 
-@PropertySource(value = {"file:${path}"})
+@PropertySource(value = {"file:${path}"},ignoreResourceNotFound = true)
 @Configuration
 public class AppProperties {
 

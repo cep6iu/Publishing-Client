@@ -5,21 +5,19 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- *
  * Class with properties of application
  *
  * @author valeriu.vicol
- *
- *  //command to set the source
- *  java -classpath /conf/application.properties :  pc-0.0.1-SNAPOSHOT.jar
- *
- *
- *
+ * &lt;p&gt;
+ * //command to set the source
+ * java -jar -D&lt;key&gt;=&quot;&lt;value&gt;&quot;&lt;name&gt;.jar
+ * &lt;p&gt;
+ * java -jar -Dapp.home=&quot;/home/mkyon/test&quot; example.jar
  */
 
-@PropertySource(value = {&quot;file:${config.location}&quot;},ignoreResourceNotFound = true)
+@PropertySource(value = {&quot;file:${path}&quot;},ignoreResourceNotFound = true)
 @Configuration
-<span class="fc" id="L22">public class AppProperties {</span>
+<span class="fc" id="L20">public class AppProperties {</span>
 
     @Value(&quot;${ldap.password}&quot;)
     private String ldapPassword;
@@ -55,75 +53,45 @@ import org.springframework.context.annotation.PropertySource;
     private String logSeverity;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public String getLdapPassword() {
-<span class="fc" id="L89">        return ldapPassword;</span>
+<span class="fc" id="L57">        return ldapPassword;</span>
     }
 
     public String getLdapDn() {
-<span class="fc" id="L93">        return ldapDn;</span>
+<span class="fc" id="L61">        return ldapDn;</span>
 
     }
 
     public String getLdapUrl() {
-<span class="fc" id="L98">        return ldapUrl;</span>
+<span class="fc" id="L66">        return ldapUrl;</span>
     }
 
     public String getLdapConnectionTimeout() {
-<span class="fc" id="L102">        return ldapConnectionTimeout;</span>
+<span class="fc" id="L70">        return ldapConnectionTimeout;</span>
     }
 
     public String getLdapReadTimeout() {
-<span class="fc" id="L106">        return ldapReadTimeout;</span>
+<span class="fc" id="L74">        return ldapReadTimeout;</span>
     }
 
     public String getConnectionPoolTimeout() {
-<span class="fc" id="L110">        return connectionPoolTimeout;</span>
+<span class="fc" id="L78">        return connectionPoolTimeout;</span>
     }
 
     public String getConnectionPoolMaxSize() {
-<span class="fc" id="L114">        return connectionPoolMaxSize;</span>
+<span class="fc" id="L82">        return connectionPoolMaxSize;</span>
     }
 
     public String getConnectionPoolPreferredSize() {
-<span class="fc" id="L118">        return connectionPoolPreferredSize;</span>
+<span class="fc" id="L86">        return connectionPoolPreferredSize;</span>
     }
 
     public String getConnectionPoolIdleTimeout() {
-<span class="fc" id="L122">        return connectionPoolIdleTimeout;</span>
+<span class="fc" id="L90">        return connectionPoolIdleTimeout;</span>
     }
 
     public String getLogSeverity() {
-<span class="fc" id="L126">        return logSeverity;</span>
+<span class="fc" id="L94">        return logSeverity;</span>
     }
 
 
