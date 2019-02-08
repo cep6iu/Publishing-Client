@@ -15,7 +15,7 @@ import java.util.Optional;
 
 public class PMessageXXImpl implements PMessageXXDAO {
 
-    private ConnectionManager conn = ConnectionManager.getInstance();
+    //private ConnectionManager conn = ConnectionManager.getInstance();
 
     @Override
     public LdapName buildDn(String messageId, String bucketTick, String partnerID) throws InvalidNameException {
