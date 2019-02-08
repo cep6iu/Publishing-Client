@@ -93,7 +93,7 @@ changetype: modify
 add: olcObjectClasses
 olcObjectClasses:  ( 2.5.6.100.1 NAME 'partnerConfig'
   DESC 'CTS_PC: Partner configuration properties'
-  SUP domain STRUCTURAL
+  SUP top STRUCTURAL
   MUST( partnerId $ partnerURL $ partnerName $ partnerMaxNumRetry) )
 
 dn: cn=schema,cn=config
@@ -101,7 +101,7 @@ changetype: modify
 add: olcObjectClasses
 olcObjectClasses:  ( 2.5.6.100.2 NAME 'partnerQ'
   DESC 'CTS_PC: Partner Queue'
-  SUP domain STRUCTURAL
+  SUP top STRUCTURAL
   MUST( startTick $ endTick $ partnerId) )
 
 dn: cn=schema,cn=config
@@ -109,7 +109,7 @@ changetype: modify
 add: olcObjectClasses
 olcObjectClasses:  ( 2.5.6.100.3 NAME 'pMessage10'
   DESC 'CTS_PC: Message for Partner10 Object'
-  SUP domain STRUCTURAL
+  SUP top STRUCTURAL
   MUST( message $ messageId ) )
 
 dn: cn=schema,cn=config
@@ -117,7 +117,7 @@ changetype: modify
 add: olcObjectClasses
 olcObjectClasses:  ( 2.5.6.100.4 NAME 'pMessage20'
   DESC 'CTS_PC: Message for Partner20 Object'
-  SUP domain STRUCTURAL
+  SUP top STRUCTURAL
   MUST( message $ messageId ) )
 
 dn: cn=schema,cn=config
@@ -125,5 +125,5 @@ changetype: modify
 add: olcObjectClasses
 olcObjectClasses:  ( 2.5.6.100.5 NAME 'pMsgBucket'
   DESC 'CTS_PC: Bucket Object'
-  SUP domain STRUCTURAL
+  SUP top STRUCTURAL
   MUST( tick) )
