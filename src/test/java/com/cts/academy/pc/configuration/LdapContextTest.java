@@ -20,7 +20,10 @@ import java.util.Optional;
 
 
 /**
+ *  Class for
+ *  Testing Connection to ldap , with wrong credentials
  *
+ * @author vicol.valeriu
  */
 
 
@@ -30,14 +33,11 @@ import java.util.Optional;
 public class LdapContextTest {
 
     @Autowired
-    Environment environment;
-
-    @Autowired
     ApplicationContext ctx;
 
 
     @Test(expected = BeanCreationException.class )
-    public void name() {
+    public void testLdapContext() {
         LdapContext c = ctx.getBean(LdapContext.class);
     }
 }

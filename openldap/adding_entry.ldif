@@ -41,7 +41,7 @@ dn: messageId=212,tick=0,partnerId=20,dc=publishing,dc=cts-academy,dc=com
 objectClass: pMessage20
 dc: publishing
 messageId: 212
-message: Moldcell mesage
+message: Moldcell message
 
 
 
