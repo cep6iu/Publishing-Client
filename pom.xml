@@ -81,6 +81,40 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<!-- copy resources -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/conf</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/resources</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
+		<!-- exclude properties from jar -->
+	<resources>
+		<resource>
+			<directory>src/main/resources</directory>
+			<excludes>
+				<exclude>application.properties</exclude>
+			</excludes>
+		</resource>
+	</resources>
+
 	</build>
 </project>
