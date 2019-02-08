@@ -1,0 +1,60 @@
+#
+#       By Valeriu
+#
+#[1]-> adding buckets
+
+dn: tick=2,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+objectClass: pMsgBucket
+dc: publishing
+tick: 2
+
+dn: tick=2,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+objectClass: pMsgBucket
+dc: publishing
+tick: 2
+
+
+##[2]-> adding messages for each bucket
+# for partner 10
+dn: messageId=1,tick=2,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+objectClass: pMessage10
+dc: publishing
+messageId: 1
+message: First Message
+
+
+dn: messageId=2,tick=2,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+objectClass: pMessage20
+dc: publishing
+messageId: 2
+message: dast is message
+
+
+dn: messageId=10,tick=0,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+objectClass: pMessage10
+dc: publishing
+messageId: 10
+message: Orange fun message
+
+
+dn: messageId=212,tick=0,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+objectClass: pMessage20
+dc: publishing
+messageId: 212
+message: Moldcell mesage
+
+
+
+#[3]-> modify start tick and end tick
+
+dn: partnerId=20,dc=publishing,dc=cts-academy,dc=com
+changetype: modify
+add: endTick
+endTick: 2001
+
+
+dn: partnerId=10,dc=publishing,dc=cts-academy,dc=com
+changetype: modify
+add: startTick
+startTick: 201
+
