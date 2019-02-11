@@ -30,7 +30,7 @@ import static org.junit.Assert.*;
 
 @ContextConfiguration(classes = {AppProperties.class})
 @RunWith(SpringRunner.class)
-@TestPropertySource("classpath:application.properties")
+@TestPropertySource("classpath:app_test.properties")
 public class AppPropertiesTest {
 
 

@@ -29,7 +29,7 @@ import java.util.Optional;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {AppProperties.class})
-@TestPropertySource(value = "classpath:application.properties",properties = {"ldap.password=wrong_pass"})
+@TestPropertySource(value = "classpath:app_test.properties",properties = {"ldap.password=wrong_pass"})
 public class LdapContextTest {
 
     @Autowired
