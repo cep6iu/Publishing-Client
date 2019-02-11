@@ -80,6 +80,7 @@ public class PMessageXXImpl implements PMessageXXDAO {
         return null;
     }
 
+    @SuppressWarnings("Duplicates")
     @Override
     public void addPMessageXX(PMessageXX message) throws NamingException {
         LdapContext context = conManager.ldapContext();
@@ -111,6 +112,7 @@ public class PMessageXXImpl implements PMessageXXDAO {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     @Override
     public void modifyPMessageXX(PMessageXX message) throws NamingException {
         LdapContext context = conManager.ldapContext();
