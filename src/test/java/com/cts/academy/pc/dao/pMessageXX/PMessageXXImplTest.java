@@ -73,10 +73,4 @@ public class PMessageXXImplTest {
         dao.modifyPMessageXX(entity);
     }
 
-    @Test (expected = NameNotFoundException.class)
-    public void modifyNonExisting() throws NamingException {
-        entity.setPartnerID(TEST_NOT_EXISTING_PARTNER_ID);
-        dao.addPMessageXX(entity);
-        //dao.modifyPMessageXX(entity);
-    }
 }
