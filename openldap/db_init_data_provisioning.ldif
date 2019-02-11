@@ -1,0 +1,41 @@
+dn: dc=publishing,dc=cts-academy,dc=com
+objectClass: domain
+dc: publishing
+
+dn: dc=partner,dc=cts-academy,dc=com
+objectClass: domain
+dc: partner
+
+dn: partnerId=10,dc=partner,dc=cts-academy,dc=com
+objectClass: partnerConfig
+partnerId: 10
+partnerURL: localhost
+partnerName: partner10
+partnerMaxNumRetry: 10
+
+dn: partnerId=20,dc=partner,dc=cts-academy,dc=com
+objectClass: partnerConfig
+partnerId: 20
+partnerURL: localhost
+partnerName: partner20
+partnerMaxNumRetry: 15
+
+dn: partnerId=10,dc=publishing,dc=cts-academy,dc=com
+objectClass: partnerQ
+partnerId: 10
+startTick: 1
+endTick: 1
+
+dn: partnerId=20,dc=publishing,dc=cts-academy,dc=com
+objectClass: partnerQ
+partnerId: 20
+startTick: 1
+endTick: 1
+
+dn: tick=0,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+objectClass: pMsgBucket
+tick: 0
+
+dn: tick=0,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+objectClass: pMsgBucket
+tick: 0

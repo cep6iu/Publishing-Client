@@ -1,0 +1,129 @@
+dn: cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.1 NAME 'partnerId'
+  DESC 'CTS_PC: Partner Identifier'
+  EQUALITY integerMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 	1.3.6.1.4.1.1466.115.121.1.27 
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.2 NAME 'partnerURL'
+  DESC 'CTS_PC: Partner URL'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.3 NAME 'partnerName'
+  DESC 'CTS: Partner Name'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.4 NAME 'partnerMaxNumRetry'
+  DESC 'CTS_PC: Partner Max Number of Retry'
+  EQUALITY integerMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 	1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.5 NAME 'startTick'
+  DESC 'CTS_PC: Bucket Start Tick'
+  EQUALITY integerMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 	1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.6 NAME 'endTick'
+  DESC 'CTS_PC: Bucket End Tick'
+  EQUALITY integerMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 	1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.7 NAME 'message'
+  DESC 'CTS_PC: native message'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 	1.3.6.1.4.1.1466.115.121.1.15 
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.8 NAME 'messageId'
+  DESC 'CTS: MessageID in Bucket'
+  EQUALITY integerMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.9 NAME 'tick'
+  DESC 'CTS_PC: Bucket Current Tick'
+  EQUALITY integerMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 	1.3.6.1.4.1.1466.115.121.1.27 
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcObjectClasses
+olcObjectClasses:  ( 2.5.6.100.1 NAME 'partnerConfig'
+  DESC 'CTS_PC: Partner configuration properties'
+  SUP top STRUCTURAL
+  MUST( partnerId $ partnerURL $ partnerName $ partnerMaxNumRetry) )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcObjectClasses
+olcObjectClasses:  ( 2.5.6.100.2 NAME 'partnerQ'
+  DESC 'CTS_PC: Partner Queue'
+  SUP top STRUCTURAL
+  MUST( startTick $ endTick $ partnerId) )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcObjectClasses
+olcObjectClasses:  ( 2.5.6.100.3 NAME 'pMessage10'
+  DESC 'CTS_PC: Message for Partner10 Object'
+  SUP top STRUCTURAL
+  MUST( message $ messageId ) )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcObjectClasses
+olcObjectClasses:  ( 2.5.6.100.4 NAME 'pMessage20'
+  DESC 'CTS_PC: Message for Partner20 Object'
+  SUP top STRUCTURAL
+  MUST( message $ messageId ) )
+
+dn: cn=schema,cn=config
+changetype: modify
+add: olcObjectClasses
+olcObjectClasses:  ( 2.5.6.100.5 NAME 'pMsgBucket'
+  DESC 'CTS_PC: Bucket Object'
+  SUP top STRUCTURAL
+  MUST( tick) )
