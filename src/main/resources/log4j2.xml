@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="info">
       <Properties>
-        <Property name="basePath">C:\\logs</Property>
+        <Property name="basePath">log/</Property>
     </Properties>
     <Appenders>
         <RollingFile name="file" fileName="${basePath}/app.log"

@@ -1,7 +1,8 @@
 .settings
 .classpath
 .project
-target/
+/target
+/log
 
 ### IntelliJ IDEA ###
 .idea
