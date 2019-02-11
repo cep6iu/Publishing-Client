@@ -27,7 +27,7 @@ import java.util.Optional;
 
 @PropertySource(value = {"file:${path}"},ignoreResourceNotFound = true)
 @Configuration
-@ComponentScan
+@ComponentScan(basePackages = "com.cts")
 public class AppConfig {
 
     /**

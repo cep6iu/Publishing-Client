@@ -1,5 +1,11 @@
 package com.cts.academy.pc.dao.pMessageXX;
 
+/**
+ * Temporal Object for  PMessageXXDAO Object Class
+ * @author polun.piotr
+ *
+ */
+
 public class PMessageXX {
 
     public static final String OBJECT_CLASS = "pMessage10";

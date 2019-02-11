@@ -1,5 +1,4 @@
-package com.cts.academy.pc.dao.pMessageXX;
-
+package com.cts.academy.pc.dao.partnerQ;
 
 
 import com.cts.academy.pc.configuration.ConnectionManager;
@@ -18,52 +17,46 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Implementation for  PMessageXXDAO Interface
+ * Implementation for  PartnerQDAO Interface
  * @author polun.piotr
  *
  */
 @Repository
-public class PMessageXXImpl implements PMessageXXDAO {
+public class PartnerQImpl implements PartnerQDAO {
 
     @Autowired
     ConnectionManager conManager;
 
     @Override
-    public LdapName buildDn(String messageId, String bucketTick, String partnerID) throws InvalidNameException {
-        LdapName dn = new LdapName(PMessageXXDAO.ROOT_DN);
-        dn.add(new Rdn(PMessageXXDAO.PARTNER_ID, partnerID));
-        dn.add(new Rdn(PMessageXXDAO.BUCKET_TICK, bucketTick));
-        dn.add(new Rdn(PMessageXXDAO.MESSAGE_RDN, messageId));
+    public LdapName buildDn(String partnerQID) throws InvalidNameException {
+        LdapName dn = new LdapName(PartnerQDAO.ROOT_DN);
+        dn.add(new Rdn(PartnerQDAO.PARTNER_ID, partnerQID));
         return dn;
     }
 
     @Override
-    public LdapName buildDn(PMessageXX message) throws InvalidNameException {
-        return this.buildDn(message.getMessageID(), message.getBucketTick(), message.getPartnerID());
-    }
-
-    @Override
-    public PMessageXX getPMessageXX(String messageId, String bucketTick, String partnerID) throws NamingException {
+    public PartnerQ getPartnerQ(String partnerQId) throws NamingException {
         LdapContext context = conManager.ldapContext();
-        List<PMessageXX> searchResults = new ArrayList<>();
+        List<PartnerQ> searchResults = new ArrayList<>();
         // build orgpsn DN
-        LdapName dn = buildDn(messageId, bucketTick, partnerID);
+        LdapName dn = buildDn(partnerQId);
         // build SearchControls instance
         SearchControls controls = new SearchControls();
         controls.setSearchScope(SearchControls.OBJECT_SCOPE);
         NamingEnumeration<SearchResult> results = null;
-
         try {
-            results = context.search(dn, PMessageXXDAO.PC_SEARCH_FILTER, controls);
+            results = context.search(dn, PartnerQDAO.PC_SEARCH_FILTER, controls);
             while (results.hasMore()) {
                 SearchResult searchResult = results.next();
-                PMessageXX msg = new PMessageXX();
+                PartnerQ msg = new PartnerQ();
                 msg.setDn(searchResult.getNameInNamespace());
                 Attributes attributes = searchResult.getAttributes();
-                if (attributes.get(PMessageXX.MESSAGE_ID) != null)
-                    msg.setMessageID((String)attributes.get(PMessageXX.MESSAGE_ID).get());
-                if (attributes.get(PMessageXX.MESSAGE) != null)
-                    msg.setMessage((String)attributes.get(PMessageXX.MESSAGE).get());
+                if (attributes.get(PartnerQ.partnerQ_ID) != null)
+                    msg.setPartnerId((String)attributes.get(PartnerQ.partnerQ_ID).get());
+                if (attributes.get(PartnerQ.partnerQ_START_TICK) != null)
+                    msg.setStartTick((String)attributes.get(PartnerQ.partnerQ_START_TICK).get());
+                if (attributes.get(PartnerQ.partnerQ_END_TICK) != null)
+                    msg.setEndTick((String)attributes.get(PartnerQ.partnerQ_END_TICK).get());
 
                 searchResults.add(msg);
             }
@@ -74,6 +67,7 @@ public class PMessageXXImpl implements PMessageXXDAO {
             }
             context.close();
         }
+
         if (!searchResults.isEmpty()) {
             return searchResults.get(0);
         }
@@ -81,27 +75,28 @@ public class PMessageXXImpl implements PMessageXXDAO {
     }
 
     @Override
-    public void addPMessageXX(PMessageXX message) throws NamingException {
+    public void addPartnerQ(PartnerQ partnerQ) throws NamingException {
         LdapContext context = conManager.ldapContext();
-        LdapName dn = this.buildDn(message);
+        LdapName dn = this.buildDn(partnerQ.getPartnerId());
         try {
             Attributes attrs = new BasicAttributes();
             BasicAttribute ocattr = new BasicAttribute("objectClass");
-            ocattr.add(message.getObjectClass());
+            ocattr.add(partnerQ.getObjectClass());
             attrs.put(ocattr);
-            attrs.put(PMessageXX.MESSAGE, message.getMessage());
-            attrs.put(PMessageXX.MESSAGE_ID, message.getMessageID());
+            attrs.put(PartnerQ.partnerQ_ID, partnerQ.getPartnerId());
+            attrs.put(PartnerQ.partnerQ_START_TICK, partnerQ.getStartTick());
+            attrs.put(PartnerQ.partnerQ_END_TICK, partnerQ.getEndTick());
             context.bind(dn, null, attrs);
         } finally {
             context.close();
         }
+
     }
 
     @Override
-    public void deletePMessageXX(PMessageXX message) throws NamingException {
+    public void deletePartnerQ(PartnerQ partnerQ) throws NamingException {
         LdapContext context = conManager.ldapContext();
-        LdapName dn = this.buildDn(message);
-
+        LdapName dn = this.buildDn(partnerQ.getPartnerId());
         try {
             context.unbind(dn);
         }
@@ -112,21 +107,22 @@ public class PMessageXXImpl implements PMessageXXDAO {
     }
 
     @Override
-    public void modifyPMessageXX(PMessageXX message) throws NamingException {
+    public void modifyPartnerQ(PartnerQ partnerQ) throws NamingException {
         LdapContext context = conManager.ldapContext();
-        LdapName dn = this.buildDn(message);
-
+        LdapName dn = this.buildDn(partnerQ.getPartnerId());
         try {
             Attributes attrs = new BasicAttributes();
             BasicAttribute ocattr = new BasicAttribute("objectClass");
-            ocattr.add(message.getObjectClass());
+            ocattr.add(partnerQ.getObjectClass());
             attrs.put(ocattr);
-            attrs.put(PMessageXX.MESSAGE, message.getMessage());
-            attrs.put(PMessageXX.MESSAGE_ID, message.getMessageID());
+            attrs.put(PartnerQ.partnerQ_ID, partnerQ.getPartnerId());
+            attrs.put(PartnerQ.partnerQ_START_TICK, partnerQ.getStartTick());
+            attrs.put(PartnerQ.partnerQ_END_TICK, partnerQ.getEndTick());
             context.modifyAttributes(dn, DirContext.REPLACE_ATTRIBUTE, attrs);
         }
         finally {
             context.close();
         }
+
     }
 }

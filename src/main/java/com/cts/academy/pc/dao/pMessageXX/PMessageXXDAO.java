@@ -5,7 +5,7 @@ import javax.naming.NamingException;
 import javax.naming.ldap.LdapName;
 
 /**
- * Interface for  PMessageXX Object Class
+ * Interface for  PMessageXXDAO
  * @author polun.piotr
  *
  */
