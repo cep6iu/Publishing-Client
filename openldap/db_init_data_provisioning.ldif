@@ -9,14 +9,14 @@ dc: partner
 dn: partnerId=10,dc=partner,dc=cts-academy,dc=com
 objectClass: partnerConfig
 partnerId: 10
-partnerURL: localhost
+partnerURL: http://localhost:8090/partner10Service
 partnerName: partner10
 partnerMaxNumRetry: 3
 
 dn: partnerId=20,dc=partner,dc=cts-academy,dc=com
 objectClass: partnerConfig
 partnerId: 20
-partnerURL: localhost
+partnerURL: http://localhost:8090/partner20Service
 partnerName: partner20
 partnerMaxNumRetry: 3
 
