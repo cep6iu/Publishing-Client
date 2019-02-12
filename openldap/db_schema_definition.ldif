@@ -90,6 +90,16 @@ olcAttributeTypes:  ( 2.5.4.100.9 NAME 'tick'
 
 dn: cn=schema,cn=config
 changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 2.5.4.100.10 NAME 'nbReEnqueueAttempts'
+  DESC 'CTS_PC: Number of re-enqueues for a message'
+  EQUALITY integerMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 	1.3.6.1.4.1.1466.115.121.1.27 
+  SINGLE-VALUE )
+
+dn: cn=schema,cn=config
+changetype: modify
 add: olcObjectClasses
 olcObjectClasses:  ( 2.5.6.100.1 NAME 'partnerConfig'
   DESC 'CTS_PC: Partner configuration properties'
@@ -110,7 +120,7 @@ add: olcObjectClasses
 olcObjectClasses:  ( 2.5.6.100.3 NAME 'pMessage10'
   DESC 'CTS_PC: Message for Partner10 Object'
   SUP top STRUCTURAL
-  MUST( message $ messageId ) )
+  MUST( message $ messageId $ nbReEnqueueAttempts) )
 
 dn: cn=schema,cn=config
 changetype: modify
@@ -118,7 +128,7 @@ add: olcObjectClasses
 olcObjectClasses:  ( 2.5.6.100.4 NAME 'pMessage20'
   DESC 'CTS_PC: Message for Partner20 Object'
   SUP top STRUCTURAL
-  MUST( message $ messageId ) )
+  MUST( message $ messageId $ nbReEnqueueAttempts) )
 
 dn: cn=schema,cn=config
 changetype: modify

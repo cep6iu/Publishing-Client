@@ -33,6 +33,7 @@ public class PMessageXXDAOImplTest {
     public int TEST_BUCKET_ID = 0;
     public int TEST_NOT_EXISTING_MESSAGE_ID = 10;
     public int TEST_PARTNER_ID = 10;
+    public int TEST_RE_ENQ = 0;
     public String TEST_DN = "messageID=10,tick=0,partnerID=10,dc=publishing,dc=cts-academy,dc=com";
     public String TEST_MESSAGE = "Some testing Message in here....";
 
@@ -49,6 +50,7 @@ public class PMessageXXDAOImplTest {
         entity.setMessageID(TEST_NOT_EXISTING_MESSAGE_ID);
         entity.setPartnerID(TEST_PARTNER_ID);
         entity.setBucketTick(TEST_BUCKET_ID);
+        entity.setMessageReEnq(TEST_RE_ENQ);
         entity.setDn(dao.buildDn(entity).toString());
     }
 

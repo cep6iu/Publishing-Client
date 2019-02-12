@@ -50,13 +50,10 @@ public class PartnerQDAOImpl implements PartnerQDAO {
                 PartnerQ msg = new PartnerQ();
                 msg.setDn(searchResult.getNameInNamespace());
                 Attributes attributes = searchResult.getAttributes();
-                if (attributes.get(PartnerQ.PARTNER_ID) != null)
-                    msg.setPartnerId(Integer.parseInt(attributes.get(PartnerQ.PARTNER_ID).get().toString()));
-                if (attributes.get(PartnerQ.PARTNER_START_TICK) != null)
-                    msg.setStartTick(Integer.parseInt(attributes.get(PartnerQ.PARTNER_START_TICK).get().toString()));
-                if (attributes.get(PartnerQ.PARTNER_END_TICK) != null)
-                    msg.setEndTick(Integer.parseInt(attributes.get(PartnerQ.PARTNER_END_TICK).get().toString()));
 
+                msg.setPartnerId(Integer.parseInt(attributes.get(PartnerQ.PARTNER_ID).get().toString()));
+                msg.setStartTick(Integer.parseInt(attributes.get(PartnerQ.PARTNER_START_TICK).get().toString()));
+                msg.setEndTick(Integer.parseInt(attributes.get(PartnerQ.PARTNER_END_TICK).get().toString()));
                 searchResults.add(msg);
             }
         }
