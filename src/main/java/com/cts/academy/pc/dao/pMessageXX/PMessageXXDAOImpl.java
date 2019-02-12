@@ -61,8 +61,9 @@ public class PMessageXXDAOImpl implements PMessageXXDAO {
                 Attributes attributes = searchResult.getAttributes();
 
                 msg.setMessageID(Integer.parseInt(attributes.get(PMessageXX.MESSAGE_ID).get().toString()));
-                msg.setMessageID(Integer.parseInt(attributes.get(PMessageXX.MESSAGE_RE_ENQ).get().toString()));
+                msg.setMessageReEnq(Integer.parseInt(attributes.get(PMessageXX.MESSAGE_RE_ENQ).get().toString()));
                 msg.setMessage(attributes.get(PMessageXX.MESSAGE).get().toString());
+                msg.setCustomerIdentifier(attributes.get(PMessageXX.MESSAGE_CUSTOMER_ID).get().toString());
                 searchResults.add(msg);
             }
         }
@@ -90,6 +91,7 @@ public class PMessageXXDAOImpl implements PMessageXXDAO {
             attrs.put(ocattr);
             attrs.put(PMessageXX.MESSAGE_ID, Integer.toString(message.getMessageID()));
             attrs.put(PMessageXX.MESSAGE_RE_ENQ, Integer.toString(message.getMessageReEnq()));
+            attrs.put(PMessageXX.MESSAGE_CUSTOMER_ID, message.getCustomerIdentifier());
             attrs.put(PMessageXX.MESSAGE, message.getMessage());
             context.bind(dn, null, attrs);
         } finally {
@@ -124,6 +126,7 @@ public class PMessageXXDAOImpl implements PMessageXXDAO {
             attrs.put(ocattr);
             attrs.put(PMessageXX.MESSAGE_ID, Integer.toString(message.getMessageID()));
             attrs.put(PMessageXX.MESSAGE_RE_ENQ, Integer.toString(message.getMessageReEnq()));
+            attrs.put(PMessageXX.MESSAGE_CUSTOMER_ID, message.getCustomerIdentifier());
             attrs.put(PMessageXX.MESSAGE, message.getMessage());
             context.modifyAttributes(dn, DirContext.REPLACE_ATTRIBUTE, attrs);
         }

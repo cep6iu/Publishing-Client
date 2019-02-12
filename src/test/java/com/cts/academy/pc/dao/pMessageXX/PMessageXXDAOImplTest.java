@@ -51,6 +51,7 @@ public class PMessageXXDAOImplTest {
         entity.setPartnerID(TEST_PARTNER_ID);
         entity.setBucketTick(TEST_BUCKET_ID);
         entity.setMessageReEnq(TEST_RE_ENQ);
+        entity.setCustomerIdentifier("Mercedes-BENZ");
         entity.setDn(dao.buildDn(entity).toString());
     }
 

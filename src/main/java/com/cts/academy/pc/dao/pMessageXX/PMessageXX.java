@@ -12,15 +12,25 @@ public class PMessageXX {
     public static final String MESSAGE_ID = "messageId";
     public static final String MESSAGE = "message";
     public static final String MESSAGE_RE_ENQ = "nbReEnqueueAttempts";
+    public static final String MESSAGE_CUSTOMER_ID = "customerIdentifier";
 
     private String objectClass = OBJECT_CLASS;
     private String dn;
     private int messageID;
     private int partnerID;
     private int bucketTick;
-
     private int messageReEnq;
+
     private String message;
+    private String customerIdentifier;
+
+
+    public String getCustomerIdentifier() {
+        return customerIdentifier;
+    }
+    public void setCustomerIdentifier(String customerIdentifier) {
+        this.customerIdentifier = customerIdentifier;
+    }
 
     public int getMessageReEnq() {
         return messageReEnq;
