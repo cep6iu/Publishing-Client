@@ -14,9 +14,9 @@ public class PMessageXX {
 
     private String objectClass = OBJECT_CLASS;
     private String dn;
-    private String messageID;
-    private String partnerID;
-    private String bucketTick;
+    private int messageID;
+    private int partnerID;
+    private int bucketTick;
     private String message;
 
     public String getRdnAttrName() {
@@ -35,11 +35,11 @@ public class PMessageXX {
         this.dn = dn;
     }
 
-    public void setMessageID(String messageID) {
+    public void setMessageID(int messageID) {
         this.messageID = messageID;
     }
 
-    public String getMessageID() {
+    public int getMessageID() {
         return messageID;
     }
 
@@ -55,19 +55,19 @@ public class PMessageXX {
         return message;
     }
 
-    public String getPartnerID() {
+    public int getPartnerID() {
         return partnerID;
     }
 
-    public void setPartnerID(String partnerID) {
+    public void setPartnerID(int partnerID) {
         this.partnerID = partnerID;
     }
 
-    public String getBucketTick() {
+    public int getBucketTick() {
         return bucketTick;
     }
 
-    public void setBucketTick(String bucketTick) {
+    public void setBucketTick(int bucketTick) {
         this.bucketTick = bucketTick;
     }
 }

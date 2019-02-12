@@ -1,8 +1,6 @@
 package com.cts.academy.pc.dao.pMessageXX;
 
 import com.cts.academy.pc.configuration.AppConfig;
-import com.cts.academy.pc.dao.partnerQ.PartnerQ;
-import com.cts.academy.pc.dao.partnerQ.PartnerQImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +11,6 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.naming.InvalidNameException;
-import javax.naming.NameAlreadyBoundException;
 import javax.naming.NameNotFoundException;
 import javax.naming.NamingException;
 
@@ -29,24 +26,24 @@ import static org.junit.Assert.*;
 @ContextConfiguration(classes = {AppConfig.class})
 @RunWith(SpringRunner.class)
 @TestPropertySource(value = "classpath:app_test.properties",properties = {"ldap.password=cts_academy"})
-public class PMessageXXImplTest {
+public class PMessageXXDAOImplTest {
 
-    public String TEST_EXISTING_PARTNER_ID = "10";
-    public String TEST_NOT_EXISTING_PARTNER_ID = "100";
-    public String TEST_BUCKET_ID = "0";
-    public String TEST_NOT_EXISTING_MESSAGE_ID = "10";
-    public String TEST_PARTNER_ID = "10";
+    public int TEST_EXISTING_PARTNER_ID = 10;
+    public int TEST_NOT_EXISTING_PARTNER_ID = 100;
+    public int TEST_BUCKET_ID = 0;
+    public int TEST_NOT_EXISTING_MESSAGE_ID = 10;
+    public int TEST_PARTNER_ID = 10;
     public String TEST_DN = "messageID=10,tick=0,partnerID=10,dc=publishing,dc=cts-academy,dc=com";
     public String TEST_MESSAGE = "Some testing Message in here....";
 
     @Autowired
     ApplicationContext ctx;
-    PMessageXXImpl dao;
+    PMessageXXDAOImpl dao;
     PMessageXX entity;
 
     @Before
     public void setUp() throws Exception {
-        dao = ctx.getBean(PMessageXXImpl.class);
+        dao = ctx.getBean(PMessageXXDAOImpl.class);
         entity = new PMessageXX();
         entity.setMessage(TEST_MESSAGE);
         entity.setMessageID(TEST_NOT_EXISTING_MESSAGE_ID);

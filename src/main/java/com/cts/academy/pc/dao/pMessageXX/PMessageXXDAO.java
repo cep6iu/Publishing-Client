@@ -24,7 +24,7 @@ public interface PMessageXXDAO {
      * @return instance of {@link LdapName}
      * @throws InvalidNameException
      */
-    public LdapName buildDn(String messageId, String bucketTick, String partnerID) throws InvalidNameException;
+    public LdapName buildDn(int messageId, int bucketTick, int partnerID) throws InvalidNameException;
     /**
      * Build DN for a PMessageXX entry
      * @param message - message instance
@@ -40,7 +40,7 @@ public interface PMessageXXDAO {
      * @return an instance of {@link PMessageXX}
      * @throws NamingException
      */
-    public PMessageXX getPMessageXX(String messageId, String bucketTick, String partnerID) throws NamingException;
+    public PMessageXX getPMessageXX(int messageId, int bucketTick, int partnerID) throws NamingException;
     /**
      * Add a new entry of PMessageXX
      * @param message - instance of {@link PMessageXX} to be added (created)

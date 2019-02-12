@@ -28,24 +28,24 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {AppConfig.class})
 @TestPropertySource(value = "classpath:app_test.properties",properties = {"ldap.password=cts_academy"})
-public class PartnerQImplTest {
+public class PartnerQDAOImplTest {
 
-    public String TEST_EXISTING_PARTNER_ID = "10";
-    public String TEST_NOT_EXISTING_PARTNER_ID = "1000";
-    public String TEST_DN = "partnerID=10,dc=publishing,dc=cts-academy,dc=com";
+    public int TEST_EXISTING_PARTNER_ID = 10;
+    public int TEST_NOT_EXISTING_PARTNER_ID = 1000;
+    public String TEST_DN = "partnerId=10,dc=publishing,dc=cts-academy,dc=com";
 
     @Autowired
     ApplicationContext ctx;
-    PartnerQImpl dao;
+    PartnerQDAOImpl dao;
     PartnerQ entity;
 
     @Before
     public void setUp() throws Exception {
-        dao = ctx.getBean(PartnerQImpl.class);
+        dao = ctx.getBean(PartnerQDAOImpl.class);
         entity = new PartnerQ();
         entity.setPartnerId(TEST_NOT_EXISTING_PARTNER_ID);
-        entity.setStartTick("1");
-        entity.setEndTick("0");
+        entity.setStartTick(1);
+        entity.setEndTick(0);
     }
 
     @Test
@@ -74,11 +74,11 @@ public class PartnerQImplTest {
     @Test
     public void modifyPartnerQ() throws NamingException {
             entity.setPartnerId(TEST_EXISTING_PARTNER_ID);
-            entity.setStartTick("2");
-            entity.setEndTick("0");
+            entity.setStartTick(2);
+            entity.setEndTick(0);
             dao.modifyPartnerQ(entity);
             assertEquals(dao.getPartnerQ(entity.getPartnerId()).getStartTick(), entity.getStartTick());
-            entity.setStartTick("1");
+            entity.setStartTick(1);
             dao.modifyPartnerQ(entity);
     }
 
