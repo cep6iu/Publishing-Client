@@ -8,12 +8,11 @@ import org.springframework.core.env.Environment;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import static org.junit.Assert.assertEquals;
 
 
 /**
- * verify if properties loaded in AppConfiguration(Context) are the same witch are seted in .properties file
+ * verify if properties loaded in AppConfig(Context) are the same witch are set in .properties file
  *
  * @author valeriu.vicol
  */

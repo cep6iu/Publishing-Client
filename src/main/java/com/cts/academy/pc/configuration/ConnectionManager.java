@@ -42,12 +42,16 @@ public class ConnectionManager {
     private String pass;
 
 
+
     @Bean
     public InitialLdapContext ldapContext() throws NamingException {
         return new InitialLdapContext(env, null);
     }
 
 
+    /**
+     *  set properties int Env for creating ldap Context
+     */
     @PostConstruct
     private void postConstruct() {
         env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");

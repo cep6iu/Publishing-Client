@@ -6,16 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import javax.naming.NamingException;
 import javax.naming.ldap.LdapContext;
-
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
  *  Class for
- *  Testing Connection to ldap , with wrong credentials
+ *  Testing Connection to ldap
  *
  * @author vicol.valeriu
  */
