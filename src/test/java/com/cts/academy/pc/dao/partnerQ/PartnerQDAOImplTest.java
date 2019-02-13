@@ -122,6 +122,7 @@ public class PartnerQDAOImplTest {
 
     @After
     public void tearDown() throws Exception {
+        entity.setPartnerId(TEST_NEW_PARTNER_ID);
         dao.deletePartnerQ(entity);
     }
 }
