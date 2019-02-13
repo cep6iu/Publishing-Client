@@ -1,0 +1,56 @@
+#
+#   by vii
+#   provisioning openldap with data
+#
+
+#[1] -> adding buckets
+dn: tick=2,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+changetype: add
+objectClass: pMsgBucket
+tick: 2
+
+dn: tick=1,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+changetype: add
+objectClass: pMsgBucket
+tick: 1
+
+
+##[2]-> adding messages for each bucket
+dn: messageId=1,tick=2,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+changetype: add
+objectClass: pMessage10
+messageId: 1
+message: First Message
+
+dn: messageId=3,tick=2,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+changetype: add
+objectClass: pMessage10
+messageId: 3
+message: One more message in Bucket2
+
+dn: messageId=2,tick=1,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+changetype: add
+objectClass: pMessage20
+messageId: 2
+message: for blackberry1
+
+
+dn: messageId=20,tick=1,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+changetype: add
+objectClass: pMessage20
+messageId: 20
+message: for blackberry-second
+
+
+#[3] -> modify tick's
+dn: partnerId=20,dc=publishing,dc=cts-academy,dc=com
+changetype: modify
+replace: endTick
+endTick: 2001
+
+
+dn: partnerId=10,dc=publishing,dc=cts-academy,dc=com
+changetype: modify
+replace: startTick
+startTick: 201
+

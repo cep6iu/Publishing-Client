@@ -1,0 +1,43 @@
+/**
+ * Installation guide for OpenLDAP container
+ * VM Name: academy-vm
+ * Docker Container name: academy-openldap-pc
+ * @author polun.piotr
+ *
+ */
+
+In order to setup OpenLDAP server on a local machine please follow theses steps:
+
+Reqs: Installed Docker for Windows, Oracle VM Machine
+
+Step 1. "Creating Virtual Machine"
+* execute in bash:
+docker-machine create --virtualbox-cpu-count "2" --virtualbox-memory "2000" --virtualbox-disk-size "20000" academy-vm
+if VM is already started then
+docker-machine start academy-vm
+
+Step 2.
+* execute in bash:
+eval $(docker-machine env academy-vm --shell bash)
+
+Step 3. "Run OpenLDAP docker image:"
+* execute in bash:
+docker run -p 389:389 -p 689:689 --name academy-openldap-pc -e LDAP_ORGANISATION="CTS Academy" -e LDAP_DOMAIN="cts-academy.com" -e LDAP_ADMIN_PASSWORD="cts_academy" -d osixia/openldap:1.2.2
+
+Step 4. "Copying files to docker"
+docker cp db_schema_definition.ldif academy-openldap-pc:/
+docker cp db_init_data_provisioning.ldif academy-openldap-pc:/
+
+Step 5. *Enter in OpenLDAP container
+winpty docker exec -it academy-openldap-pc bash
+
+
+/*		Additional					*/
+
+
+
+*Adds schema
+ldapadd -x -h 192.168.99.100 -D "cn=admin,cn=config" -w config -f db_schema_definition.ldif
+
+*Add Data
+ldapadd -x -h 192.168.99.100 -D "cn=admin,dc=cts-academy,dc=com" -w cts_academy -f db_init_data_provisioning.ldif

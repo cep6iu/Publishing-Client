@@ -1,0 +1,6 @@
+dn: messageId=1,tick=0,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+objectClass: pMessage10
+messageId: 1
+message: Some Message In Here....
+nbReEnqueueAttempts: 0
+customerIdentifier: Nokia
