@@ -80,7 +80,7 @@ public class PMessageXX {
         return partnerID;
     }
 
-    public void setPartnerID(int partnerID) {
+    public void setPartnerId(int partnerID) {
         this.partnerID = partnerID;
     }
 

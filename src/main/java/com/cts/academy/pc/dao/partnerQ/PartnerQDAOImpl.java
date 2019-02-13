@@ -96,8 +96,7 @@ public class PartnerQDAOImpl implements PartnerQDAO {
         try {
             context.unbind(dn);
         }
-        catch (javax.naming.NameNotFoundException e) {
-        }finally {
+        finally {
             context.close();
         }
     }
@@ -111,6 +110,7 @@ public class PartnerQDAOImpl implements PartnerQDAO {
             BasicAttribute ocattr = new BasicAttribute("objectClass");
             ocattr.add(partnerQ.getObjectClass());
             attrs.put(ocattr);
+
             attrs.put(PartnerQ.PARTNER_START_TICK, Integer.toString(partnerQ.getStartTick()));
             attrs.put(PartnerQ.PARTNER_END_TICK, Integer.toString(partnerQ.getEndTick()));
             context.modifyAttributes(dn, DirContext.REPLACE_ATTRIBUTE, attrs);

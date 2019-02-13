@@ -42,6 +42,11 @@ public class PMessageXXDAOImpl implements PMessageXXDAO {
     }
 
     @Override
+    public PMessageXX getPMessageXX(PMessageXX message) throws NamingException {
+        return getPMessageXX(message.getMessageID(), message.getBucketTick(), message.getPartnerID());
+    }
+
+    @Override
     public PMessageXX getPMessageXX(int messageId, int bucketTick, int partnerID) throws NamingException {
         LdapContext context = conManager.ldapContext();
         List<PMessageXX> searchResults = new ArrayList<>();
@@ -103,12 +108,10 @@ public class PMessageXXDAOImpl implements PMessageXXDAO {
     public void deletePMessageXX(PMessageXX message) throws NamingException {
         LdapContext context = conManager.ldapContext();
         LdapName dn = this.buildDn(message);
-
         try {
             context.unbind(dn);
         }
-        catch (javax.naming.NameNotFoundException e) {
-        }finally {
+        finally {
             context.close();
         }
     }

@@ -42,6 +42,12 @@ public interface PMessageXXDAO {
      */
     public PMessageXX getPMessageXX(int messageId, int bucketTick, int partnerID) throws NamingException;
     /**
+     * Search for a PMessageXX entry
+     * @param message - instance of {@link PMessageXX}
+     * @throws NamingException
+     */
+    public PMessageXX getPMessageXX(PMessageXX message) throws NamingException;
+    /**
      * Add a new entry of PMessageXX
      * @param message - instance of {@link PMessageXX} to be added (created)
      * @throws NamingException
