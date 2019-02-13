@@ -11,13 +11,34 @@ public class PMessageXX {
     public static final String OBJECT_CLASS = "pMessage10";
     public static final String MESSAGE_ID = "messageId";
     public static final String MESSAGE = "message";
+    public static final String MESSAGE_RE_ENQ = "nbReEnqueueAttempts";
+    public static final String MESSAGE_CUSTOMER_ID = "customerIdentifier";
 
     private String objectClass = OBJECT_CLASS;
     private String dn;
-    private String messageID;
-    private String partnerID;
-    private String bucketTick;
+    private int messageID;
+    private int partnerID;
+    private int bucketTick;
+    private int messageReEnq;
+
     private String message;
+    private String customerIdentifier;
+
+
+    public String getCustomerIdentifier() {
+        return customerIdentifier;
+    }
+    public void setCustomerIdentifier(String customerIdentifier) {
+        this.customerIdentifier = customerIdentifier;
+    }
+
+    public int getMessageReEnq() {
+        return messageReEnq;
+    }
+
+    public void setMessageReEnq(int messageReEnq) {
+        this.messageReEnq = messageReEnq;
+    }
 
     public String getRdnAttrName() {
         return MESSAGE_ID;
@@ -25,7 +46,7 @@ public class PMessageXX {
 
     @Override
     public String toString() {
-        return "Object: " + OBJECT_CLASS  + " :[dn=" + dn + "], messageId=" + messageID + ", message=" + message; }
+        return "Object: " + OBJECT_CLASS  + " :[dn=" + dn + "], messageId=" + messageID + ", reEnq="+ messageReEnq + ", message=" + message; }
 
     public String getDn() {
         return dn;
@@ -35,11 +56,11 @@ public class PMessageXX {
         this.dn = dn;
     }
 
-    public void setMessageID(String messageID) {
+    public void setMessageID(int messageID) {
         this.messageID = messageID;
     }
 
-    public String getMessageID() {
+    public int getMessageID() {
         return messageID;
     }
 
@@ -55,19 +76,19 @@ public class PMessageXX {
         return message;
     }
 
-    public String getPartnerID() {
+    public int getPartnerID() {
         return partnerID;
     }
 
-    public void setPartnerID(String partnerID) {
+    public void setPartnerId(int partnerID) {
         this.partnerID = partnerID;
     }
 
-    public String getBucketTick() {
+    public int getBucketTick() {
         return bucketTick;
     }
 
-    public void setBucketTick(String bucketTick) {
+    public void setBucketTick(int bucketTick) {
         this.bucketTick = bucketTick;
     }
 }

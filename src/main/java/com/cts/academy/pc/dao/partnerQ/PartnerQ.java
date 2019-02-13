@@ -9,9 +9,9 @@ package com.cts.academy.pc.dao.partnerQ;
 public class PartnerQ {
 
     public static final String OBJECT_CLASS = "partnerQ";
-    public static final String partnerQ_ID = "partnerId";
-    public static final String partnerQ_START_TICK = "startTick";
-    public static final String partnerQ_END_TICK = "endTick";
+    public static final String PARTNER_ID = "partnerId";
+    public static final String PARTNER_START_TICK = "startTick";
+    public static final String PARTNER_END_TICK = "endTick";
 
     public void setObjectClass(String objectClass) {
         this.objectClass = objectClass;
@@ -20,11 +20,12 @@ public class PartnerQ {
     private String objectClass = OBJECT_CLASS;
 
     private String dn;
-    private String partnerId;
-    private String startTick;
-    private String endTick;
+    private int partnerId;
+    private int startTick;
+    private int endTick;
+
     public String getRdnAttrName() {
-        return startTick;
+        return PARTNER_ID;
     }
 
     public String getObjectClass() {
@@ -36,27 +37,27 @@ public class PartnerQ {
         return "Object: " + OBJECT_CLASS  + " :[dn=" + dn + "], partnerId=" + partnerId + ", startTick=" + startTick + ", endTick" + endTick; }
 
 
-    public String getPartnerId() {
+    public int getPartnerId() {
         return partnerId;
     }
 
-    public void setPartnerId(String partnerId) {
+    public void setPartnerId(int partnerId) {
         this.partnerId = partnerId;
     }
 
-    public String getStartTick() {
+    public int getStartTick() {
         return startTick;
     }
 
-    public void setStartTick(String startTick) {
+    public void setStartTick(int startTick) {
         this.startTick = startTick;
     }
 
-    public String getEndTick() {
+    public int getEndTick() {
         return endTick;
     }
 
-    public void setEndTick(String endTick) {
+    public void setEndTick(int endTick) {
         this.endTick = endTick;
     }
 
