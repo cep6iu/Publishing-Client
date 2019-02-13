@@ -42,10 +42,6 @@ public class AppPropertiesTest {
         
     }
 
-    @Test
-    public void authenticationTest() {
-        assertEquals("simple",env.getProperty("con.sun.jndi.ldap.connect.pool.authentication"));
-    }
 
 
     @Test
@@ -78,8 +74,5 @@ public class AppPropertiesTest {
         assertEquals("30000",env.getProperty("com.sun.jndi.ldap.connect.timeout"));
     }
 
-    @Test
-    public void ldapPoolingTest(){
-        assertEquals("true",env.getProperty("com.sun.jndi.ldap.connect.pool"));
-    }
+
 }

@@ -1,60 +1,56 @@
 #
-#       By Valeriu
+#   by vii
+#   provisioning openldap with data
 #
-#[1]-> adding buckets
 
+#[1] -> adding buckets
 dn: tick=2,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+changetype: add
 objectClass: pMsgBucket
-dc: publishing
 tick: 2
 
-dn: tick=2,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+dn: tick=1,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+changetype: add
 objectClass: pMsgBucket
-dc: publishing
-tick: 2
+tick: 1
 
 
 ##[2]-> adding messages for each bucket
-# for partner 10
 dn: messageId=1,tick=2,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+changetype: add
 objectClass: pMessage10
-dc: publishing
 messageId: 1
 message: First Message
 
-
-dn: messageId=2,tick=2,partnerId=20,dc=publishing,dc=cts-academy,dc=com
-objectClass: pMessage20
-dc: publishing
-messageId: 2
-message: dast is message
-
-
-dn: messageId=10,tick=0,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+dn: messageId=3,tick=2,partnerId=10,dc=publishing,dc=cts-academy,dc=com
+changetype: add
 objectClass: pMessage10
-dc: publishing
-messageId: 10
-message: Orange fun message
+messageId: 3
+message: One more message in Bucket2
 
-
-dn: messageId=212,tick=0,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+dn: messageId=2,tick=1,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+changetype: add
 objectClass: pMessage20
-dc: publishing
-messageId: 212
-message: Moldcell message
+messageId: 2
+message: for blackberry1
 
 
+dn: messageId=20,tick=1,partnerId=20,dc=publishing,dc=cts-academy,dc=com
+changetype: add
+objectClass: pMessage20
+messageId: 20
+message: for blackberry-second
 
-#[3]-> modify start tick and end tick
 
+#[3] -> modify tick's
 dn: partnerId=20,dc=publishing,dc=cts-academy,dc=com
 changetype: modify
-add: endTick
+replace: endTick
 endTick: 2001
 
 
 dn: partnerId=10,dc=publishing,dc=cts-academy,dc=com
 changetype: modify
-add: startTick
+replace: startTick
 startTick: 201
 

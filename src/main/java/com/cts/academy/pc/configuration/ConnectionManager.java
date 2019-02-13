@@ -1,11 +1,9 @@
 package com.cts.academy.pc.configuration;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.PostConstruct;
 import javax.naming.Context;
 import javax.naming.NamingException;
@@ -58,9 +56,9 @@ public class ConnectionManager {
         env.put(Context.PROVIDER_URL, url);
         env.put(Context.SECURITY_PRINCIPAL, ldapDn);
         env.put(Context.SECURITY_CREDENTIALS, pass);
+        env.put(Context.SECURITY_AUTHENTICATION, "simple");
 
-        env.put(Context.SECURITY_AUTHENTICATION, pro.getProperty(AUTHENTICATION));
-        env.put(POOLING, pro.getProperty(POOLING));
+        env.put(POOLING, "true");
         env.put(LDAP_CONNECTION_TIME_OUT, pro.getProperty(LDAP_CONNECTION_TIME_OUT));
         env.put(LDAP_READ_TIME_OUT, pro.getProperty(LDAP_READ_TIME_OUT));
 

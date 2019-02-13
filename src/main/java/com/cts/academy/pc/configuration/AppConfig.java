@@ -20,7 +20,6 @@ import org.springframework.context.annotation.PropertySource;
 public class AppConfig {
 
 
-    public static final String AUTHENTICATION = "con.sun.jndi.ldap.connect.pool.authentication";
     public static final String CONNECTION_POOL_INIT_SIZE = "com.sun.jndi.ldap.connect.pool.initsize";
     public static final String CONNECTION_POOL_MAX_SIZE = "com.sun.jndi.ldap.connect.pool.maxsize";
     public static final String CONNECTION_POOL_PREF_SIZE = "com.sun.jndi.ldap.connect.pool.prefsize";
