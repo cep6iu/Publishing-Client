@@ -122,6 +122,7 @@
 			<directory>src/main/resources</directory>
 			<excludes>
 				<exclude>application.properties</exclude>
+				<exclude>log4j2.xml</exclude>
 			</excludes>
 		</resource>
 	</resources>
