@@ -23,6 +23,7 @@ import static org.junit.Assert.*;
 @ContextConfiguration(classes = {AppConfig.class})
 @TestPropertySource(value = "classpath:app_test.properties", properties = {"ldap.password=cts_academy"})
 public class MessageBucketDAOImplTest {
+
     public int TEST_PARTNER_ID = 10;
     public int TEST_TICK = 100;
     public String TEST_DN = "tick=100,partnerId=10,dc=publishing,dc=cts-academy,dc=com";
