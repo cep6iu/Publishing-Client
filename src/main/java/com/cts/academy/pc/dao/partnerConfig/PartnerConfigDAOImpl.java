@@ -21,10 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author serghei.sciurenco
  */
-
 
 @Repository
 public class PartnerConfigDAOImpl implements PartnerConfigDAO {
@@ -37,26 +35,6 @@ public class PartnerConfigDAOImpl implements PartnerConfigDAO {
         LdapName dn = new LdapName(PartnerConfigDAO.ROOT_DN);
         dn.add(new Rdn(PartnerConfig.PARTNER_ID, Integer.toString(partnerId)));
         return dn;
-    }
-
-    @Override
-    public void addPartnerConfig(PartnerConfig partnerConfig) throws NamingException {
-        LdapContext context = conManager.ldapContext();
-        LdapName dn = this.buildDn(partnerConfig.getPartnerId());
-        try {
-            Attributes attrs = new BasicAttributes();
-            BasicAttribute ocattr = new BasicAttribute("objectClass");
-            ocattr.add(partnerConfig.getObjectClass());
-            attrs.put(ocattr);
-            attrs.put(PartnerConfig.PARTNER_ID, Integer.toString(partnerConfig.getPartnerId()));
-            attrs.put(PartnerConfig.PARTNER_NAME, partnerConfig.getPartnerName());
-            attrs.put(PartnerConfig.PARTNER_URL, partnerConfig.getPartnerUrl());
-            attrs.put(PartnerConfig.PARTNER_MAX_NUM_RETRY, Integer.toString( partnerConfig.getPartnerMaxNumRetry()));
-            context.bind(dn, null, attrs);
-
-        } finally {
-            context.close();
-        }
     }
 
     @Override
@@ -77,12 +55,12 @@ public class PartnerConfigDAOImpl implements PartnerConfigDAO {
                 Attributes attributes = searchResult.getAttributes();
 
                 pcof.setPartnerId(Integer.parseInt(attributes.get(PartnerConfig.PARTNER_ID).get().toString()));
-                pcof.setPartnerName(attributes.get(PartnerConfig.PARTNER_NAME).get().toString());
+                pcof.setPartnerName(String.valueOf(attributes.get(PartnerConfig.PARTNER_NAME)));
                 pcof.setPartnerMaxNumRetry(Integer.parseInt(attributes.get(PartnerConfig.PARTNER_MAX_NUM_RETRY).get().toString()));
-                pcof.setPartnerUrl(attributes.get(PartnerConfig.PARTNER_URL).get().toString());
+                pcof.setPartnerUrl(String.valueOf(attributes.get(PartnerConfig.PARTNER_URL)));
                 searchResults.add(pcof);
             }
-        }   finally {
+        } finally {
             if (results != null) {
                 results.close();
             }
@@ -95,9 +73,39 @@ public class PartnerConfigDAOImpl implements PartnerConfigDAO {
         return null;
     }
 
+    @Override
+    public void addPartnerConfig(PartnerConfig partnerConfig) throws NamingException {
+        LdapContext context = conManager.ldapContext();
+        LdapName dn = this.buildDn(partnerConfig.getPartnerId());
+        try {
+            Attributes attrs = new BasicAttributes();
+            BasicAttribute ocattr = new BasicAttribute("objectClass");
+            ocattr.add(partnerConfig.getObjectClass());
+            attrs.put(ocattr);
+            attrs.put(PartnerConfig.PARTNER_ID, Integer.toString(partnerConfig.getPartnerId()));
+            attrs.put(PartnerConfig.PARTNER_NAME, partnerConfig.getPartnerName());
+            attrs.put(PartnerConfig.PARTNER_URL, partnerConfig.getPartnerUrl());
+            attrs.put(PartnerConfig.PARTNER_MAX_NUM_RETRY, Integer.toString(partnerConfig.getPartnerMaxNumRetry()));
+            context.bind(dn, null, attrs);
+
+        } finally {
+            context.close();
+        }
+    }
 
     @Override
-    public void modifyParnerConfig(PartnerConfig partnerConfig) throws NamingException {
+    public void deletePartnerConfig(int partnerId) throws NamingException {
+        LdapContext context = conManager.ldapContext();
+        LdapName dn = this.buildDn(partnerId);
+        try {
+            context.unbind(dn);
+        } finally {
+            context.close();
+        }
+    }
+
+    @Override
+    public void modifyPartnerConfig(PartnerConfig partnerConfig) throws NamingException {
         LdapContext context = conManager.ldapContext();
         LdapName dn = this.buildDn(partnerConfig.getPartnerId());
         try {
@@ -109,22 +117,8 @@ public class PartnerConfigDAOImpl implements PartnerConfigDAO {
             attrs.put(PartnerConfig.PARTNER_NAME, partnerConfig.getPartnerName());
             attrs.put(PartnerConfig.PARTNER_MAX_NUM_RETRY, Integer.toString(partnerConfig.getPartnerMaxNumRetry()));
             context.modifyAttributes(dn, DirContext.REPLACE_ATTRIBUTE, attrs);
-        }
-        finally {
+        } finally {
             context.close();
         }
-
-    }
-
-    @Override
-    public void deletePartnerConfig(int partnerId) throws NamingException {
-        LdapContext context = conManager.ldapContext();
-        LdapName dn = this.buildDn(partnerId);
-        try {
-            context.unbind(dn);
-        }finally {
-            context.close();
-        }
-
     }
 }

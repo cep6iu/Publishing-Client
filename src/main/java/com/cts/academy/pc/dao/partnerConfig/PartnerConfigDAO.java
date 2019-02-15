@@ -14,7 +14,6 @@ import javax.naming.ldap.LdapName;
  */
 public interface PartnerConfigDAO {
 
-
     public String ROOT_DN = "dc=partner,dc=cts-academy,dc=com";
     public String PC_SEARCH_FILTER = "(objectClass=partnerConfig)";
 
@@ -28,21 +27,13 @@ public interface PartnerConfigDAO {
     public LdapName buildDn(int partnerId) throws InvalidNameException;
 
     /**
-     * Update an entry
-     *
-     * @param partnerConfig
-     * @return updated instance of {@link LdapName}
-     * @throws NamingException
-     */
-    public void modifyParnerConfig(PartnerConfig partnerConfig) throws NamingException;
-
-    /**
-     * Modify an entry
+     * Search an entry
      *
      * @param partnerId
-     * @return modified instance of {@link LdapName}
+     * @return found instance of {@link LdapName}
      * @throws NamingException
      */
+
     public PartnerConfig getPartnerConfig(int partnerId) throws NamingException;
 
     /**
@@ -63,4 +54,12 @@ public interface PartnerConfigDAO {
      */
     public void deletePartnerConfig(int partnerId) throws NamingException;
 
+    /**
+     * Modify an entry
+     *
+     * @param partnerConfig
+     * @return modified instance of {@link LdapName}
+     * @throws NamingException
+     */
+    public void modifyPartnerConfig(PartnerConfig partnerConfig) throws NamingException;
 }

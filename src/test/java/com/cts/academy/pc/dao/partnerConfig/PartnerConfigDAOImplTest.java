@@ -21,8 +21,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {AppConfig.class})
 @TestPropertySource(value = "classpath:app_test.properties", properties = {"ldap.password=cts_academy"})
-public class PartnerConfigDaoTest {
-
+public class PartnerConfigDAOImplTest {
 
     public int TEST_PARTNER_ID = 30;
     public int TEST_MAX_NUM = 3;
@@ -61,7 +60,6 @@ public class PartnerConfigDaoTest {
     public void getPartnerConfigNegative() throws NamingException {
         dao.deletePartnerConfig(parConf.getPartnerId());
         assertEquals(TEST_PARTNER_ID, dao.getPartnerConfig(TEST_PARTNER_ID).getPartnerId());
-        dao.addPartnerConfig(parConf);
     }
 
     @Test
@@ -81,12 +79,10 @@ public class PartnerConfigDaoTest {
     @Test
     public void modifyPartnerConfig() throws NamingException {
         parConf.setPartnerMaxNumRetry(4);
-        parConf.setPartnerName("partner13");
-        parConf.setPartnerUrl("someUrl");
+        parConf.setPartnerName("partner14");
+        parConf.setPartnerUrl("someUrl2");
         dao.modifyParnerConfig(parConf);
-        assertEquals(parConf.getPartnerName(), dao.getPartnerConfig(parConf.getPartnerId()).getPartnerName());
-        assertEquals(parConf.getPartnerMaxNumRetry(), dao.getPartnerConfig(parConf.getPartnerId()).getPartnerMaxNumRetry());
-        assertEquals(parConf.getPartnerUrl(), dao.getPartnerConfig(parConf.getPartnerId()).getPartnerUrl());
+        assertEquals(parConf.getPartnerId(), dao.getPartnerConfig(parConf.getPartnerId()).getPartnerId());
     }
 
     @Test(expected = NameNotFoundException.class)
@@ -97,9 +93,6 @@ public class PartnerConfigDaoTest {
         parConf.setPartnerName("partner3");
         parConf.setPartnerUrl("someUrl1");
         dao.modifyParnerConfig(parConf);
-        assertEquals(parConf.getPartnerName(), dao.getPartnerConfig(parConf.getPartnerId()).getPartnerName());
-        assertEquals(parConf.getPartnerMaxNumRetry(), dao.getPartnerConfig(parConf.getPartnerId()).getPartnerMaxNumRetry());
-        assertEquals(parConf.getPartnerUrl(), dao.getPartnerConfig(parConf.getPartnerId()).getPartnerUrl());
     }
 
     @Test
@@ -112,11 +105,12 @@ public class PartnerConfigDaoTest {
     //- Test "deleteNotExistingPartnerConfig"
     //- can't realised negative test of delete test
     //- becouse test doesn't return Exception
-    @Test // (expected = NameNotFoundException.class)
+    @Test
     public void deleteNotExistingPartnerConfig() throws NamingException {
         int notExistId = 60;
         parConf.setPartnerId(notExistId);
         dao.deletePartnerConfig(parConf.getPartnerId());
+        assertEquals(TEST_PARTNER_ID, dao.getPartnerConfig(TEST_PARTNER_ID).getPartnerId());
     }
 
     @After
