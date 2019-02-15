@@ -4,8 +4,8 @@
         <Property name="basePath">log/</Property>
     </Properties>
     <Appenders>
-        <RollingFile name="file" fileName="${basePath}/pc_app.log"
-                     filePattern="${basePath}/app-%d{yyyy-MM-dd-HH-mm-ss}.log">
+        <RollingFile name="file" fileName="${basePath}/pcApp.log"
+                     filePattern="${basePath}/pcApp-%d{yyyy-MM-dd-HH-mm-ss}.log">
             <PatternLayout>
                 <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
             </PatternLayout>
