@@ -17,10 +17,12 @@ import javax.naming.NameNotFoundException;
 import javax.naming.NamingException;
 
 import static org.junit.Assert.*;
+
+
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {AppConfig.class})
-@TestPropertySource(value = "classpath:app_test.properties",properties = {"ldap.password=cts_academy"})
-public class MessageBucketImplTest {
+@TestPropertySource(value = "classpath:app_test.properties", properties = {"ldap.password=cts_academy"})
+public class MessageBucketDAOImplTest {
     public int TEST_PARTNER_ID = 10;
     public int TEST_TICK = 100;
     public String TEST_DN = "tick=100,partnerId=10,dc=publishing,dc=cts-academy,dc=com";
@@ -37,55 +39,52 @@ public class MessageBucketImplTest {
         msgBuck.setTick(TEST_TICK);
         msgBuck.setPartnerId(TEST_PARTNER_ID);
         msgBuck.setDn(TEST_DN);
-        dao.addMsgBucketDao(msgBuck);
+        dao.addMsgBucketDAO(msgBuck);
     }
+
     @Test
     public void buildDn() throws InvalidNameException {
-
-        assertEquals(TEST_DN, dao.buildDn(TEST_TICK,TEST_PARTNER_ID).toString() );
+        assertEquals(TEST_DN, dao.buildDn(TEST_TICK, TEST_PARTNER_ID).toString());
     }
 
     @Test
-    public void addMsgBucketDaoPositive() throws NamingException {
-        dao.deleteMsgBucketDao(msgBuck);
-        dao.addMsgBucketDao(msgBuck);
-        assertEquals(msgBuck.getTick(), dao.getMsgBucketDao(msgBuck.getTick(), msgBuck.getPartnerId()).getTick());
-    }
-
-    @Test(expected = NameAlreadyBoundException.class)
-    public void addMsgBucketDaoNegative() throws  NamingException {
-        dao.addMsgBucketDao(msgBuck);
-    }
-
-    @Test
-    public void getMsgBucketDaoPositive() throws NamingException {
-        assertEquals(msgBuck.getTick() , dao.getMsgBucketDao(msgBuck.getTick(),msgBuck.getPartnerId()).getTick());
+    public void getMsgBucketDAOPositive() throws NamingException {
+        assertEquals(msgBuck.getTick(), dao.getMsgBucketDAO(msgBuck.getTick(), msgBuck.getPartnerId()).getTick());
     }
 
     @Test(expected = NameNotFoundException.class)
-     public  void  getMsgBucketDaoNegative() throws NamingException {
-        dao.deleteMsgBucketDao(msgBuck);
-        assertEquals(msgBuck.getTick(), dao.getMsgBucketDao(msgBuck.getTick(), msgBuck.getPartnerId()).getTick());
-        dao.addMsgBucketDao(msgBuck);
+    public void getMsgBucketDAONegative() throws NamingException {
+        dao.deleteMsgBucketDAO(msgBuck);
+        assertEquals(msgBuck.getTick(), dao.getMsgBucketDAO(msgBuck.getTick(), msgBuck.getPartnerId()).getTick());
+    }
+
+    @Test
+    public void addMsgBucketDAOPositive() throws NamingException {
+        dao.deleteMsgBucketDAO(msgBuck);
+        dao.addMsgBucketDAO(msgBuck);
+        assertEquals(msgBuck.getTick(), dao.getMsgBucketDAO(msgBuck.getTick(), msgBuck.getPartnerId()).getTick());
+    }
+
+    @Test(expected = NameAlreadyBoundException.class)
+    public void addMsgBucketDAONegative() throws NamingException {
+        dao.addMsgBucketDAO(msgBuck);
     }
 
     @Test(expected = NameNotFoundException.class)
     public void deleteExistingPositive() throws NamingException {
-        dao.deleteMsgBucketDao(msgBuck);
-        dao.getMsgBucketDao(msgBuck.getTick(), msgBuck.getPartnerId()).getTick();
+        dao.deleteMsgBucketDAO(msgBuck);
+        dao.getMsgBucketDAO(msgBuck.getTick(), msgBuck.getPartnerId()).getTick();
     }
 
     @Test(expected = NameNotFoundException.class)
     public void deleteNotExistingNegative() throws NamingException {
         msgBuck.setPartnerId(11);
-        dao.deleteMsgBucketDao(msgBuck);
+        dao.deleteMsgBucketDAO(msgBuck);
     }
 
     @After
     public void tearDown() throws Exception {
         msgBuck.setPartnerId(TEST_PARTNER_ID);
-        dao.deleteMsgBucketDao(msgBuck);
+        dao.deleteMsgBucketDAO(msgBuck);
     }
-
-
 }

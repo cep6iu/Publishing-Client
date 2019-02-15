@@ -1,8 +1,5 @@
 package com.cts.academy.pc.dao.pMessageBucket;
 
-
-import com.cts.academy.pc.dao.pMessageXX.PMessageXX;
-
 import javax.naming.InvalidNameException;
 import javax.naming.NamingException;
 import javax.naming.ldap.LdapName;
@@ -38,7 +35,7 @@ public interface MessageBucketDAO {
      * @throws NamingException
      */
 
-    public MessageBucket getMsgBucketDao(int partnerId, int tick) throws NamingException;
+    public MessageBucket getMsgBucketDAO(int partnerId, int tick) throws NamingException;
 
     /**
      * Add a new entry
@@ -46,7 +43,7 @@ public interface MessageBucketDAO {
      * @return instance of {@link LdapName}
      * @throws NamingException
      */
-    public void addMsgBucketDao(MessageBucket messageBucket) throws NamingException;
+    public void addMsgBucketDAO(MessageBucket messageBucket) throws NamingException;
 
     /**
      * Delete an entry
@@ -54,5 +51,5 @@ public interface MessageBucketDAO {
      * @return instance of {@link LdapName}
      * @throws NamingException
      */
-    public void deleteMsgBucketDao(MessageBucket messageBucket) throws NamingException;
+    public void deleteMsgBucketDAO(MessageBucket messageBucket) throws NamingException;
 }

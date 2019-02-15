@@ -35,29 +35,13 @@ public class MessageBucketDAOImpl implements MessageBucketDAO {
     }
 
     @Override
-    public void addMsgBucketDao(MessageBucket messageBucket) throws NamingException {
+    public MessageBucket getMsgBucketDAO(int partnerId, int tick) throws NamingException {
         LdapContext context = conManager.ldapContext();
-        LdapName dn = this.buildDn(messageBucket);
-        try {
-            Attributes attrs = new BasicAttributes();
-            BasicAttribute ocattr = new BasicAttribute("objectClass");
-            ocattr.add(messageBucket.getObjectClass());
-            attrs.put(ocattr);
-            attrs.put(MessageBucket.TICK, Integer.toString(messageBucket.getTick()));
-            context.bind(dn, null, attrs);
-        } finally {
-            context.close();
-        }
-    }
-
-    @Override
-    public MessageBucket getMsgBucketDao(int partnerId, int tick) throws NamingException {
-            LdapContext context = conManager.ldapContext();
-            List<MessageBucket> searchResults = new ArrayList<>();
-            LdapName dn = buildDn(partnerId, tick);
-            SearchControls controls = new SearchControls();
-            controls.setSearchScope(SearchControls.OBJECT_SCOPE);
-            NamingEnumeration<SearchResult> results = null;
+        List<MessageBucket> searchResults = new ArrayList<>();
+        LdapName dn = buildDn(partnerId, tick);
+        SearchControls controls = new SearchControls();
+        controls.setSearchScope(SearchControls.OBJECT_SCOPE);
+        NamingEnumeration<SearchResult> results = null;
         try {
             results = context.search(dn, MessageBucketDAO.PC_SEARCH_FILTER, controls);
             while (results.hasMore()) {
@@ -82,7 +66,23 @@ public class MessageBucketDAOImpl implements MessageBucketDAO {
     }
 
     @Override
-    public void deleteMsgBucketDao(MessageBucket messageBucket) throws NamingException {
+    public void addMsgBucketDAO(MessageBucket messageBucket) throws NamingException {
+        LdapContext context = conManager.ldapContext();
+        LdapName dn = this.buildDn(messageBucket);
+        try {
+            Attributes attrs = new BasicAttributes();
+            BasicAttribute ocattr = new BasicAttribute("objectClass");
+            ocattr.add(messageBucket.getObjectClass());
+            attrs.put(ocattr);
+            attrs.put(MessageBucket.TICK, Integer.toString(messageBucket.getTick()));
+            context.bind(dn, null, attrs);
+        } finally {
+            context.close();
+        }
+    }
+
+    @Override
+    public void deleteMsgBucketDAO(MessageBucket messageBucket) throws NamingException {
             LdapContext context = conManager.ldapContext();
             LdapName dn = this.buildDn(messageBucket);
             try {
