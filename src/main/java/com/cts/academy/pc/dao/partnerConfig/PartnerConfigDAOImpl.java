@@ -55,9 +55,9 @@ public class PartnerConfigDAOImpl implements PartnerConfigDAO {
                 Attributes attributes = searchResult.getAttributes();
 
                 pcof.setPartnerId(Integer.parseInt(attributes.get(PartnerConfig.PARTNER_ID).get().toString()));
-                pcof.setPartnerName(String.valueOf(attributes.get(PartnerConfig.PARTNER_NAME)));
+                pcof.setPartnerName((String)attributes.get(PartnerConfig.PARTNER_NAME).get());
                 pcof.setPartnerMaxNumRetry(Integer.parseInt(attributes.get(PartnerConfig.PARTNER_MAX_NUM_RETRY).get().toString()));
-                pcof.setPartnerUrl(String.valueOf(attributes.get(PartnerConfig.PARTNER_URL)));
+                pcof.setPartnerUrl((String)attributes.get(PartnerConfig.PARTNER_URL).get());
                 searchResults.add(pcof);
             }
         } finally {
