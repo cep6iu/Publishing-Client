@@ -81,7 +81,7 @@ public class PartnerConfigDAOImplTest {
         parConf.setPartnerMaxNumRetry(4);
         parConf.setPartnerName("partner14");
         parConf.setPartnerUrl("someUrl2");
-        dao.modifyParnerConfig(parConf);
+        dao.modifyPartnerConfig(parConf);
         assertEquals(parConf.getPartnerId(), dao.getPartnerConfig(parConf.getPartnerId()).getPartnerId());
     }
 
@@ -92,7 +92,7 @@ public class PartnerConfigDAOImplTest {
         parConf.setPartnerMaxNumRetry(13);
         parConf.setPartnerName("partner3");
         parConf.setPartnerUrl("someUrl1");
-        dao.modifyParnerConfig(parConf);
+        dao.modifyPartnerConfig(parConf);
     }
 
     @Test
