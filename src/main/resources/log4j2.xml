@@ -14,7 +14,7 @@
             </Policies>
             <DefaultRolloverStrategy max="10">
                 <Delete basePath="${basePath}" maxDepth="1">
-                    <IfFileName glob="pc_app-*.log" />
+                    <IfFileName glob="pcApp-*.log" />
                     <IfLastModified age="1m" />
                 </Delete>
 
