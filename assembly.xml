@@ -9,11 +9,11 @@
     <includeBaseDirectory>false</includeBaseDirectory>
 
     <fileSets>
+
         <fileSet>
             <directory>pc/${project.basedir}</directory>
             <includes>
                 <include>pom.xml</include>
-                <include>README.txt</include>
             </includes>
             <useDefaultExcludes>true</useDefaultExcludes>
 
@@ -31,11 +31,14 @@
         <fileSet>
             <outputDirectory>pc/bin</outputDirectory>
             <includes>
+
                 <include>${basedir}/target/classes/com/cts/academy/pc/dao/partnerConfig/*.class</include>
                 <include>${basedir}/target/classes/com/cts/academy/pc/dao/partnerQ/*.class</include>
                 <include>${basedir}/target/classes/com/cts/academy/pc/dao/pMessageBucket/*.class</include>
                 <include>${basedir}/target/classes/com/cts/academy/pc/dao/pMessageXX/*.class</include>
                 <include>${basedir}/target/classes/com/cts/academy/pc/PublishingClient.class</include>
+                <include>${basedir}/target/classes/com/cts/academy/pc/PublishingClient.class</include>
+
             </includes>
         </fileSet>
         <fileSet>
@@ -74,5 +77,17 @@
             <outputDirectory>pc/config/resources</outputDirectory>
             <filtered>true</filtered>
         </file>
+        <file>
+            <source>${basedir}/target/pom-PublishingClinet.jar</source>
+            <outputDirectory>pc/bin</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+
+        <file>
+            <source>README.txt</source>
+            <outputDirectory>pc</outputDirectory>
+            <filtered>true</filtered>
+        </file>
     </files>
+
 </assembly>
