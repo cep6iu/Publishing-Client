@@ -37,8 +37,6 @@
                 <include>${basedir}/target/classes/com/cts/academy/pc/dao/pMessageBucket/*.class</include>
                 <include>${basedir}/target/classes/com/cts/academy/pc/dao/pMessageXX/*.class</include>
                 <include>${basedir}/target/classes/com/cts/academy/pc/PublishingClient.class</include>
-                <include>${basedir}/target/classes/com/cts/academy/pc/PublishingClient.class</include>
-
             </includes>
         </fileSet>
         <fileSet>
@@ -48,6 +46,7 @@
             </includes>
         </fileSet>
     </fileSets>
+
     <dependencySets>
         <dependencySet>
             <outputDirectory>pc/lib</outputDirectory>
@@ -66,6 +65,7 @@
             </includes>
         </dependencySet>
     </dependencySets>
+
     <files>
         <file>
             <source>${basedir}/target/classes/application.properties</source>
@@ -78,13 +78,18 @@
             <filtered>true</filtered>
         </file>
         <file>
-            <source>${basedir}/target/pom-PublishingClinet.jar</source>
+            <source>${basedir}/target/pom-PublishingClient.jar</source>
             <outputDirectory>pc/bin</outputDirectory>
             <filtered>true</filtered>
         </file>
 
         <file>
             <source>README.txt</source>
+            <outputDirectory>pc</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+        <file>
+            <source>assembly.xml</source>
             <outputDirectory>pc</outputDirectory>
             <filtered>true</filtered>
         </file>
