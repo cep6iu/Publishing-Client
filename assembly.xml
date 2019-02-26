@@ -9,7 +9,6 @@
     <includeBaseDirectory>false</includeBaseDirectory>
 
     <fileSets>
-
         <fileSet>
             <directory>${project.build.sourceDirectory}/src</directory>
             <useDefaultExcludes>true</useDefaultExcludes>
