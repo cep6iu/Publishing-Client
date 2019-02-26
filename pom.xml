@@ -4,7 +4,7 @@
 
     <groupId>com.cts.academy</groupId>
     <artifactId>pom</artifactId>
-    <version>PublishingClinet</version>
+    <version>PublishingClient</version>
     <packaging>jar</packaging>
 
     <name>pc</name>
@@ -105,6 +105,16 @@
                         <exclude>**/application.properties</exclude>
                         <exclude>**/log4j2.xml</exclude>
                     </excludes>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.cts.academy.pc.PublishingClient</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <Built-By>PubClientTeam</Built-By>
+                            <Class-Path>../config/</Class-Path>
+                        </manifestEntries>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
@@ -114,6 +124,7 @@
             <id>dist</id>
             <build>
                 <plugins>
+
                     <plugin>
                         <artifactId>maven-assembly-plugin</artifactId>
                         <version>3.1.1</version>
@@ -132,6 +143,7 @@
                             </execution>
                         </executions>
                     </plugin>
+
                 </plugins>
             </build>
         </profile>
@@ -142,6 +154,5 @@
             </activation>
         </profile>
     </profiles>
-
-
 </project>
+

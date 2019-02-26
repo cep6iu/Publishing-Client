@@ -11,87 +11,52 @@
     <fileSets>
 
         <fileSet>
-            <directory>pc/${project.basedir}</directory>
-            <includes>
-                <include>pom.xml</include>
-            </includes>
-            <useDefaultExcludes>true</useDefaultExcludes>
-
-        </fileSet>
-        <fileSet>
             <directory>${project.build.sourceDirectory}/src</directory>
             <useDefaultExcludes>true</useDefaultExcludes>
         </fileSet>
+
         <fileSet>
             <outputDirectory>pc</outputDirectory>
             <includes>
-                <include>log/*.log</include>
+                <include>log</include>
             </includes>
         </fileSet>
+
+        <fileSet>
+            <outputDirectory>pc/lib</outputDirectory>
+            <includes>
+                <include>pom-PublishingClient.jar</include>
+            </includes>
+        </fileSet>
+
         <fileSet>
             <outputDirectory>pc/bin</outputDirectory>
             <includes>
-
-                <include>${basedir}/target/classes/com/cts/academy/pc/dao/partnerConfig/*.class</include>
-                <include>${basedir}/target/classes/com/cts/academy/pc/dao/partnerQ/*.class</include>
-                <include>${basedir}/target/classes/com/cts/academy/pc/dao/pMessageBucket/*.class</include>
-                <include>${basedir}/target/classes/com/cts/academy/pc/dao/pMessageXX/*.class</include>
-                <include>${basedir}/target/classes/com/cts/academy/pc/PublishingClient.class</include>
-            </includes>
-        </fileSet>
-        <fileSet>
-            <outputDirectory>pc/config</outputDirectory>
-            <includes>
-                <include>${basedir}/target/classes/com/cts/academy/pc/configuration/*.class</include>
+                <include>ims_prime.sh</include>
             </includes>
         </fileSet>
     </fileSets>
 
-    <dependencySets>
-        <dependencySet>
-            <outputDirectory>pc/lib</outputDirectory>
-            <includes>
-                <!--  don't work couse: that libraries not used anywhere
-                most of that libraries used for #testing
-                <include>junit:junit:jar</include> -->
-                <!-- <include>org.powermock:powermock-module-junit4:jar</include>
-              <include>org.powermock:powermock-api-mockito2:jar</include>
-              <include>org.springframework:spring-test:jar</include> -->
-                <include>org.springframework:spring-core:jar</include>
-                <include>org.springframework:spring-context:jar</include>
-                <include>org.apache.logging.log4j:log4j-api:jar</include>
-                <include>org.apache.logging.log4j:log4j-core:jar</include>
-                <include>org.apache.httpcomponents:httpclient:jar</include>
-            </includes>
-        </dependencySet>
-    </dependencySets>
-
     <files>
         <file>
-            <source>${basedir}/target/classes/application.properties</source>
-            <outputDirectory>pc/config/resources</outputDirectory>
-            <filtered>true</filtered>
-        </file>
-        <file>
-            <source>${basedir}/target/classes/log4j2.xml</source>
-            <outputDirectory>pc/config/resources</outputDirectory>
-            <filtered>true</filtered>
-        </file>
-        <file>
-            <source>${basedir}/target/pom-PublishingClient.jar</source>
-            <outputDirectory>pc/bin</outputDirectory>
+            <source>${basedir}/src/main/resources/application.properties</source>
+            <outputDirectory>pc/config</outputDirectory>
             <filtered>true</filtered>
         </file>
 
         <file>
-            <source>README.txt</source>
-            <outputDirectory>pc</outputDirectory>
-            <filtered>true</filtered>
-        </file>
-        <file>
-            <source>assembly.xml</source>
-            <outputDirectory>pc</outputDirectory>
+            <source>${basedir}/src/main/resources/log4j2.xml</source>
+            <outputDirectory>pc/config</outputDirectory>
             <filtered>true</filtered>
         </file>
     </files>
+
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>pc/lib</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+
 </assembly>
