@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be3f93ab-1a30-4150-b620-5730ff42e043" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="pc" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1612">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assembly.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>build</find>
+      <find>ass</find>
+      <find>deploy</find>
+      <find>jar</find>
+      <find>log</find>
+      <find>plugin</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/com/cts/academy/pc/configuration/AppPropertiesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/pMessageBucket/MessageBucketDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cts/academy/pc/dao/pMessageBucket/MessageBucketImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cts/academy/pc/dao/pMessageXX/PMessageXXDAOImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/pMessageBucket/MessageBucketDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/pMessageBucket/MessageBucket.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cts/academy/pc/dao/partnerQ/PartnerQDAOImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cts/academy/pc/dao/pMessageBucket/MessageBucketDAOImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDAOImplTest.java" />
+        <option value="$PROJECT_DIR$/profiles.iml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerQ/PartnerQDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerConfig/PartnerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDAO.java" />
+        <option value="$PROJECT_DIR$/tar" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/app_test.properties" />
+        <option value="$PROJECT_DIR$/tar.xml" />
+        <option value="$PROJECT_DIR$/src/assembly/src.xml" />
+        <option value="$PROJECT_DIR$/target/test-classes/app_test.properties" />
+        <option value="$PROJECT_DIR$/target/classes/application.properties" />
+        <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/ims_prime.sh" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/PublishingClient.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/assembly.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Profiles" type="6783ec58:MavenProjectsStructure$ProfilesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="240" />
+    <option name="y" value="27" />
+    <option name="width" value="1400" />
+    <option name="height" value="833" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="pc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="pc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pc" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="pc" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551271699486" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/cts/academy/pc/com/cts/academy/pc/dao/partnerConfig" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\alpha2\pc" />
+      <recent name="D:\Project\alpha2\pc\src" />
+      <recent name="D:\Project\alpha2\pc\target" />
+      <recent name="D:\Project\alpha2\pc\src\main" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.PublishingClient">
+    <configuration name="PublishingClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="config.path" value="D:\Project\alpha2\pc\src\main\resources" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.cts.academy.pc.PublishingClient" />
+      <module name="pom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cts.academy.pc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageBucketDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cts.academy.pc.dao.pMessageBucket.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cts.academy.pc.dao.pMessageBucket" />
+      <option name="MAIN_CLASS_NAME" value="com.cts.academy.pc.dao.pMessageBucket.MessageBucketDAOImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartnerConfigDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cts.academy.pc.dao.partnerConfig.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cts.academy.pc.dao.partnerConfig" />
+      <option name="MAIN_CLASS_NAME" value="com.cts.academy.pc.dao.partnerConfig.PartnerConfigDAOImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartnerConfigDAOImplTest.addPartnerConfigPossitive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cts.academy.pc.dao.partnerConfig.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cts.academy.pc.dao.partnerConfig" />
+      <option name="MAIN_CLASS_NAME" value="com.cts.academy.pc.dao.partnerConfig.PartnerConfigDAOImplTest" />
+      <option name="METHOD_NAME" value="addPartnerConfigPossitive" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartnerConfigDAOImplTest.deleteNotExistingPartnerConfig" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cts.academy.pc.dao.partnerConfig.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cts.academy.pc.dao.partnerConfig" />
+      <option name="MAIN_CLASS_NAME" value="com.cts.academy.pc.dao.partnerConfig.PartnerConfigDAOImplTest" />
+      <option name="METHOD_NAME" value="deleteNotExistingPartnerConfig" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.PublishingClient" />
+      <item itemvalue="JUnit.MessageBucketDAOImplTest" />
+      <item itemvalue="JUnit.PartnerConfigDAOImplTest" />
+      <item itemvalue="JUnit.PartnerConfigDAOImplTest.addPartnerConfigPossitive" />
+      <item itemvalue="JUnit.PartnerConfigDAOImplTest.deleteNotExistingPartnerConfig" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PublishingClient" />
+        <item itemvalue="JUnit.PartnerConfigDAOImplTest" />
+        <item itemvalue="JUnit.MessageBucketDAOImplTest" />
+        <item itemvalue="JUnit.PartnerConfigDAOImplTest.addPartnerConfigPossitive" />
+        <item itemvalue="JUnit.PartnerConfigDAOImplTest.deleteNotExistingPartnerConfig" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be3f93ab-1a30-4150-b620-5730ff42e043" name="Default Changelist" comment="" />
+      <created>1550061491266</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550061491266</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="PartnerConfigDAOImplTest - 2019.02.15 at 18h 15m 39s.xml">
+      <configuration name="PartnerConfigDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageBucketDAOImplTest - 2019.02.15 at 18h 15m 50s.xml">
+      <configuration name="MessageBucketDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PartnerConfigDAOImplTest_addPartnerConfigPossitive - 2019.02.15 at 18h 21m 25s.xml">
+      <configuration name="PartnerConfigDAOImplTest.addPartnerConfigPossitive" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PartnerConfigDAOImplTest - 2019.02.15 at 18h 21m 35s.xml">
+      <configuration name="PartnerConfigDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PartnerConfigDAOImplTest - 2019.02.15 at 18h 27m 55s.xml">
+      <configuration name="PartnerConfigDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PartnerConfigDAOImplTest - 2019.02.15 at 18h 32m 00s.xml">
+      <configuration name="PartnerConfigDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PartnerConfigDAOImplTest_deleteNotExistingPartnerConfig - 2019.02.15 at 18h 49m 18s.xml">
+      <configuration name="PartnerConfigDAOImplTest.deleteNotExistingPartnerConfig" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PartnerConfigDAOImplTest - 2019.02.18 at 10h 41m 16s.xml">
+      <configuration name="PartnerConfigDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageBucketDAOImplTest - 2019.02.18 at 10h 41m 23s.xml">
+      <configuration name="MessageBucketDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PartnerConfigDAOImplTest - 2019.02.18 at 11h 45m 28s.xml">
+      <configuration name="PartnerConfigDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView" selected-index="3">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8301887" visible="true" weight="0.26092544" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Structure" order="5" sideWeight="0.16981132" side_tool="true" weight="0.26092544" />
+      <window_info id="Favorites" order="6" sideWeight="0.16981132" side_tool="true" visible="true" weight="0.26092544" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32839838" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.39300135" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.6998715" visible="true" weight="0.28667563" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.30012855" side_tool="true" weight="0.28667563" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.78731346" weight="0.32839838" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49946696" weight="0.33109018" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.13303342" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/target/com/cts/academy/pc/PublishingClient.class" />
+    <entry file="file://$PROJECT_DIR$/target/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDAOImpl.class" />
+    <entry file="file://$PROJECT_DIR$/target/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDAO.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerQ/PartnerQDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerQ/PartnerQDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tar" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerQ/PartnerQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc.xml" />
+    <entry file="file://$PROJECT_DIR$/pc.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-277">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/pMessageXX/PMessageXX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/pMessageXX/PMessageXXDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/pcApp.log" />
+    <entry file="file://$PROJECT_DIR$/profiles.iml" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cts/academy/pc/dao/partnerConfig/PartnerConfigDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="104" column="45" selection-start-line="104" selection-start-column="45" selection-end-line="104" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/dao/partnerConfig/PartnerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_6_14.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/2019-02-14T17-23-08_157-jvmRun1.dump" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/configuration/ConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/configuration/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cts/academy/pc/dao/pMessageXX/PMessageXXDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cts/academy/pc/configuration/AppPropertiesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/test-classes/com/cts/academy/pc/configuration/LdapContextTest.class" />
+    <entry file="file://$PROJECT_DIR$/target/test-classes/com/cts/academy/pc/configuration/AppPropertiesTest.class" />
+    <entry file="file://$PROJECT_DIR$/log/pcApp.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42339">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+    <entry file="file://$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+    <entry file="file://$PROJECT_DIR$/target/classes/com/cts/academy/pc/configuration/ConnectionManager.class" />
+    <entry file="file://$PROJECT_DIR$/target/classes/com/cts/academy/pc/configuration/AppConfig.class" />
+    <entry file="file://$PROJECT_DIR$/target/test-classes/app_test.properties" />
+    <entry file="file://$PROJECT_DIR$/target/classes/application.properties" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/log4j2.xml" />
+    <entry file="file://$PROJECT_DIR$/pom_old.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/academy/pc/PublishingClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/app_test.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bash.exe.stackdump">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ims_prime.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="122" column="6" lean-forward="true" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1612">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assembly.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>pc</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: commons-codec:commons-codec:1.10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
